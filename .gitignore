@@ -1,0 +1,21 @@
+# Entornos y temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
