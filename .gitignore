@@ -15,6 +15,11 @@ env/
 *.swp
 *.swo
 
+# Archivos comprimidos
+*.zip
+*.tar.gz
+*.rar
+
 # Archivos de sistema
 Thumbs.db
 Desktop.ini

@@ -33,6 +33,12 @@ TPS_IPDI_G9/
 │   ├── aritmetica_pixeles.py # Cuasi-suma, cuasi-resta, producto, cociente, if-lighter/darker
 │   └── README.md             # Documentación detallada de TP2 con fórmulas teóricas
 │
+├── TP3/                      # Trabajo Práctico N° 3: Operaciones de Luminancia
+│   ├── main.py               # Interfaz HUD moderna en espacio YIQ con curva interactiva
+│   ├── utils.py              # Conversión RGB <-> YIQ, filtros no lineales y tramos
+│   ├── tp3_pdi.py            # Alias de ejecución
+│   └── README.md             # Documentación matemática y manual de usuario
+│
 ├── .gitignore                # Archivos y temporales excluidos
 └── README.md                 # Índice general de los Trabajos Prácticos
 ```
@@ -65,6 +71,12 @@ TPS_IPDI_G9/
 - **Operaciones Condicionales de Luminancia**: *If-Lighter* e *If-Darker*.
 - Soporte para triple visor simultáneo (Imagen A, Imagen B y Resultado C), adaptación automática de resolución y medición de tiempos de cómputo en milisegundos.
 
+### [TP3: Operaciones de Luminancia en Espacio YIQ](TP3/README.md)
+- **Filtro Raíz Cuadrada**: $Y' = \sqrt{Y}$ para aclarado no lineal y realce de sombras.
+- **Filtro Cuadrado**: $Y' = Y^2$ para compresión de sombras y realce de altas luces.
+- **Transformación Lineal a Trozos**: Expansión dinámica en el intervalo $[Y_{min}, Y_{max}]$ con saturación en extremos.
+- **HUD Dark Slate**: Visor dual responsivo, representación visual interactiva de la curva $T(Y)$ en tiempo real, sliders vinculados, presets rápidos y análisis de histogramas de luminancia de 32 bins con Matplotlib.
+
 ---
 
 ## Requisitos e Instalación
@@ -92,4 +104,9 @@ python TP1/main.py
 
 # Ejecutar TP2
 python TP2/main.py
+
+# Ejecutar TP3
+python TP3/main.py
+# o también:
+python TP3/tp3_pdi.py
 ```
