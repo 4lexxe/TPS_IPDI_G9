@@ -39,6 +39,12 @@ TPS_IPDI_G9/
 │   ├── tp3_pdi.py            # Alias de ejecución
 │   └── README.md             # Documentación matemática y manual de usuario
 │
+├── TP4/                      # Trabajo Práctico N° 4: Procesamiento por Convolución
+│   ├── main.py               # Interfaz HUD Dark Slate + pipeline de convolución
+│   ├── utils.py              # Motor de convolución 2D y todos los kernels
+│   ├── tp4_pdi.py            # Alias de ejecución
+│   └── README.md             # Documentación y manual de usuario de TP4
+│
 ├── .gitignore                # Archivos y temporales excluidos
 └── README.md                 # Índice general de los Trabajos Prácticos
 ```
@@ -77,6 +83,14 @@ TPS_IPDI_G9/
 - **Transformación Lineal a Trozos**: Expansión dinámica en el intervalo $[Y_{min}, Y_{max}]$ con saturación en extremos.
 - **HUD Dark Slate**: Visor dual responsivo, representación visual interactiva de la curva $T(Y)$ en tiempo real, sliders vinculados, presets rápidos y análisis de histogramas de luminancia de 32 bins con Matplotlib.
 
+### [TP4: Procesamiento por Convolución](TP4/README.md)
+- **Paso Bajos**: Plano (Box) 3×3, 5×5, 7×7; Bartlett triangular 3×3, 5×5, 7×7; Gaussiano 5×5 y 7×7.
+- **Detectores de Bordes**: Laplaciano de 4 vecinos (v4) y 8 vecinos (v8); Sobel en las 8 orientaciones (N, NE, E, SE, S, SW, W, NW).
+- **Paso Altos**: $HP = \delta - LP_{Gauss}$ con frecuencia de corte $f_c = 0{,}2$ y $f_c = 0{,}4$.
+- **Paso Banda**: Diferencia de Gaussianos (DoG) 5×5.
+- **Extensión de borde**: Repetición artificial de filas/columnas extremas (sin relleno de ceros).
+- **HUD Dark Slate**: Visor dual, visualización interactiva del kernel con grilla de colores y coeficientes numéricos en tiempo real.
+
 ---
 
 ## Requisitos e Instalación
@@ -109,4 +123,9 @@ python TP2/main.py
 python TP3/main.py
 # o también:
 python TP3/tp3_pdi.py
+
+# Ejecutar TP4
+python TP4/main.py
+# o también:
+python TP4/tp4_pdi.py
 ```
