@@ -45,6 +45,12 @@ TPS_IPDI_G9/
 │   ├── tp4_pdi.py            # Alias de ejecución
 │   └── README.md             # Documentación y manual de usuario de TP4
 │
+├── TP5/                      # Trabajo Práctico N° 5: Morfología Matemática y Filtros No Lineales
+│   ├── main.py               # Interfaz HUD Dark Studio + control de pipeline
+│   ├── utils.py              # Operadores morfológicos, mediana, mean shift, esqueletización
+│   ├── tp5_pdi.py            # Alias de ejecución
+│   └── README.md             # Documentación matemática y manual de usuario
+│
 ├── .gitignore                # Archivos y temporales excluidos
 └── README.md                 # Índice general de los Trabajos Prácticos
 ```
@@ -91,6 +97,15 @@ TPS_IPDI_G9/
 - **Extensión de borde**: Repetición artificial de filas/columnas extremas (sin relleno de ceros).
 - **HUD Dark Slate**: Visor dual, visualización interactiva del kernel con grilla de colores y coeficientes numéricos en tiempo real.
 
+### [TP5: Morfología Matemática y Filtros No Lineales](TP5/README.md)
+- **Elemento Estructurante en Cruz 3×3**: vecindad activa de 5 píxeles con extensión de borde perimetral.
+- **Morfología Básica en Grises**: Erosión (mínimo local) y Dilatación (máximo local).
+- **Filtros Morfológicos y Realce**: Apertura, Cierre y Top-Hat blanco.
+- **Bordes Morfológicos**: Borde exterior, borde interior y gradiente morfológico.
+- **Filtros No Lineales Espaciales**: Mediana 3×3 (filtro de ruido impulsivo) y Mean Shift adaptativo.
+- **Segmentación y Morfología Binaria**: Binarización paramétrica y esqueletización topológica iterativa.
+- **HUD Dark Studio**: Visor dual responsivo, visualizador matricial del elemento estructurante, encadenamiento secuencial de operaciones y control dinámico de parámetros.
+
 ---
 
 ## Requisitos e Instalación
@@ -128,4 +143,10 @@ python TP3/tp3_pdi.py
 python TP4/main.py
 # o también:
 python TP4/tp4_pdi.py
+
+# Ejecutar TP5
+python TP5/main.py
+# o también:
+python TP5/tp5_pdi.py
 ```
+
